@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-color: #F3F3F3;
+  background-color: #d9dbdd;
   overflow-x: hidden;
 }
 
@@ -19,7 +19,8 @@ body {
 
 .splash-title {
   font-family: 'Bangers', cursive;
-  font-size: 10rem;
+  font-size: 6rem;
+  color: #313a56
 }
 
 .splash-battleship-image {
@@ -29,23 +30,23 @@ body {
   width: 100%;
   transform: rotateY(180deg);
   pointer-events: none;
-  opacity: .25;
 }
 
 .btn {
   font-size: inherit;
-  background-color: hsl(30, 100%, 50%);
+  background-color: #354d6c;
   padding: .5em 1em;
   outline: none;
   border: none;
   text-decoration: none;
   cursor: pointer;
   border-radius: .2em;
-  color: #333;
+  color: white;
+  display: inline-block;
 }
 
 .btn:hover, .btn:focus {
-  background-color: hsl(30, 100%, 40%);
+  background-color: #313a56;
 }
 
 .splash-btn {
@@ -66,21 +67,21 @@ body {
 .battleship-grid {
   margin: 2vmin;
   display: grid;
-  background-color: hsl(200, 100%, 50%);
-  grid-template-rows: repeat(10, 4.6vmin);
-  grid-template-columns: repeat(10, 4.6vmin);
+  background-color: #313a56;
+  grid-template-rows: repeat(6, 4.6vmin);
+  grid-template-columns: repeat(6, 4.6vmin);
 }
 
 .grid-computer > .taken,
 .grid-computer > .boom {
-  background-color: hsl(200, 100%, 50%) !important;
+  background-color: #313a56 !important;
   border-radius: 0 !important;
 }
 
 .taken,
 .ship {
   position: relative;
-  background-color: hsl(0, 0%, 80%);
+  background-color: #879eab;
 }
 
 .taken.start.vertical,
@@ -196,24 +197,6 @@ body {
   --width: 1;
 }
 
-.battleship-container {
-  --width: 4;
-}
-
-.battleship-container-vertical {
-  --height: 4;
-  --width: 1;
-}
-
-.carrier-container {
-  --width: 5;
-}
-
-.carrier-container-vertical {
-  --height: 5;
-  --width: 1;
-}
-
 .hidden-info {
   font-size: 1.5rem;
   align-items: center;
@@ -280,7 +263,7 @@ body {
   }
 
   100% {
-    background-color: hsl(0, 0%, 80%);
+    background-color: #879eab;
   }
 }
 

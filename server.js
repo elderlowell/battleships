@@ -1,7 +1,7 @@
 const express = require('express')
 const path = require('path')
 const http = require('http')
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 3400
 const socketio = require('socket.io')
 const app = express()
 const server = http.createServer(app)
@@ -85,5 +85,5 @@ io.on('connection', socket => {
     connections[playerIndex] = null
     socket.emit('timeout')
     socket.disconnect()
-  }, 600000) // 10 minute limit per player
+  }, 6000000) // 10 minute limit per player
 })

@@ -2,7 +2,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Battle Ships</title>
+    <!-- <title>Battle Ships</title> -->
+    <title>Doctrinal Mastery Battleship</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat&display=swap" rel="stylesheet">
     <script>
@@ -12,23 +13,34 @@
     <script src="app.js" charset="utf-8"></script>
   </head>
   <body>
-    <div class="container">
+    <div style="padding: 4px">
+      <a href="/index.html" class="btn">Home</a>
+      <a href="/multiplayer.html" class="restart btn" style="display: none">Restart</a>
+      <a class="show-board btn" style="display: none">Show My Ships</a>
+    </div>
+    <div id="status" class="container">
       <div class="player p1">
-        Player 1
+        Team 1
         <div class="connected">Connected</div>
         <div class="ready">Ready</div>
       </div>
-      
+
       <div class="player p2">
-        Player 2
+        Team 2
         <div class="connected">Connected</div>
         <div class="ready">Ready</div>
       </div>
     </div>
 
     <div class="container">
-      <div class="battleship-grid grid-user"></div>
-      <div class="battleship-grid grid-computer"></div>
+      <div class="left-side">
+        <h1 style="text-align: center">Your Ships</h1>
+        <div class="battleship-grid grid-user"></div>
+      </div>
+      <div class="right-side" style="display: none">
+        <h1 style="text-align: center">Enemy Ships</h1>
+        <div class="battleship-grid grid-computer"></div>
+      </div>
     </div>
 
     <div class="container hidden-info">
@@ -36,7 +48,7 @@
         <button id="start" class="btn">Start Game</button>
         <button id="rotate" class="btn">Rotate Your Ships</button>
       </div>
-      <h3 id="whose-go" class="info-text">Your Go</h3>
+      <h3 id="whose-go" class="info-text"></h3>
       <h3 id="info" class="info-text"></h3>
     </div>
 
@@ -44,9 +56,6 @@
       <div class="grid-display">
         <div class="ship destroyer-container" draggable="true"><div id="destroyer-0"></div><div id="destroyer-1"></div></div>
         <div class="ship submarine-container" draggable="true"><div id="submarine-0"></div><div id="submarine-1"></div><div id="submarine-2"></div></div>
-        <div class="ship cruiser-container" draggable="true"><div id="cruiser-0"></div><div id="cruiser-1"></div><div id="cruiser-2"></div></div>
-        <div class="ship battleship-container" draggable="true"><div id="battleship-0"></div><div id="battleship-1"></div><div id="battleship-2"></div><div id="battleship-3"></div></div>
-        <div class="ship carrier-container" draggable="true"><div id="carrier-0"></div><div id="carrier-1"></div><div id="carrier-2"></div><div id="carrier-3"></div><div id="carrier-4"></div></div>
       </div>
     </div>
   </body>
